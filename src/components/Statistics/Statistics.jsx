@@ -3,7 +3,6 @@ import React from 'react';
 
 export class Statistics extends React.Component {
   render() {
-    // const { good, neutral, bad, total, positivePercentage } = this.props;
     return (
       <>
         <StyledCounter>
