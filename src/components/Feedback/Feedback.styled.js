@@ -12,10 +12,6 @@ export const ButtonContainer = styled(Flex)`
   justify-content: center;
   align-items: center;
   background-color: #a2a8ba;
-  & h2 {
-    color: #5f677d;
-    text-align: center;
-  }
 `;
 export const StyledButton = styled.button`
   padding: 10px 15px;
@@ -35,6 +31,7 @@ export const StyledButton = styled.button`
 `;
 export const TitleStyled = styled.h2`
   color: #5f677d;
+  text-align: center;
 `;
 export const StyledCounter = styled.div`
   background-color: #5f677d;

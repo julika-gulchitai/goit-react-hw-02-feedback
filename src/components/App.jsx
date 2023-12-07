@@ -12,8 +12,9 @@ export class App extends React.Component {
     bad: 0,
   };
 
-  handleClick = target => {
-    this.setState(prevState => ({ [target]: prevState[target] + 1 }));
+  handleClick = event => {
+    const buttonName = event.target.name.toLowerCase();
+    this.setState({ [buttonName]: this.state[buttonName] + 1 });
   };
 
   countTotalFeedback = () => {
@@ -28,7 +29,7 @@ export class App extends React.Component {
     const { good, neutral, bad } = this.state;
     console.log(this.state);
     const total = this.countTotalFeedback();
-
+    const positivePercentage = this.countPositiveFeedbackPercentage(total);
     const arrFeedback = ['Good', 'Neutral', 'Bad'];
     return (
       <div>
@@ -45,10 +46,7 @@ export class App extends React.Component {
                 bad={bad}
                 total={total}
                 // countTotalFeedback={this.countTotalFeedback()}
-                positivePercentage={this.countPositiveFeedbackPercentage(
-                  good,
-                  total
-                )}
+                positivePercentage={positivePercentage}
               />
             ) : (
               <Notification message="There is no feedback" />
