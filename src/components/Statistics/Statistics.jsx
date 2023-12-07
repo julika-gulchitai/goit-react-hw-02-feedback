@@ -6,21 +6,21 @@ export class Statistics extends React.Component {
     return (
       <>
         <StyledCounter>
-          <li>
+          <div>
             Good: <span>{this.props.good}</span>
-          </li>
-          <li>
+          </div>
+          <div>
             Neutral: <span>{this.props.neutral}</span>
-          </li>
-          <li>
+          </div>
+          <div>
             Bad: <span>{this.props.bad}</span>
-          </li>
-          <li>
+          </div>
+          <div>
             Total: <span>{this.props.total}</span>
-          </li>
-          <li>
+          </div>
+          <div>
             Positive feedback: <span>{this.props.positivePercentage}</span>
-          </li>
+          </div>
         </StyledCounter>
       </>
     );
